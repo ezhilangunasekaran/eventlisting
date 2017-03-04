@@ -1,7 +1,7 @@
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    Event List
+    {{pageTitle}}
   </div>
   <!-- search results -->
   <div class="panel-body">
@@ -19,7 +19,7 @@
   </div>
 
   <div class="table-responsive">
-    <table class="table">
+    <table class="table" *ngIf='events && events.length'>
       <thead>
       <tr>
         <th><button class="btn btn-primary">Show image</button></th>
@@ -29,9 +29,16 @@
         <th>Fees</th>
         <th>Rating</th>
       </tr>
+
       </thead>
       <tbody>
-
+      <tr *ngFor='let event of events'>
+        <td>{{event.name}}</td>
+        <td>{{event.code}}</td>
+        <td>{{event.date}}</td>
+        <td>{{event.fee}}</td>
+        <td>{{event.rating}}</td>
+      </tr>
       </tbody>
     </table>
   </div>
