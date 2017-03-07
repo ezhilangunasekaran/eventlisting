@@ -15,6 +15,7 @@ export class EventListComponent implements OnInit {
   imageWidth:number =50;
   imageMargin:number =2;
   showImage:boolean =false;
+  searchCriteria:string = 'sand';
 
   events: any[] = [  {
     "name": "Event 1",
