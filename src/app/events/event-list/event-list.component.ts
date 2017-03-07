@@ -14,7 +14,7 @@ export class EventListComponent implements OnInit {
   pageTitle:string = 'Event List';
   imageWidth:number =50;
   imageMargin:number =2;
-  image:number =50;
+  showImage:boolean =false;
 
   events: any[] = [  {
     "name": "Event 1",
@@ -97,4 +97,7 @@ export class EventListComponent implements OnInit {
       "capacity": 400
     }
   ];
+  toggleImage(): void{
+    this.showImage = !this.showImage;
+  }
 }
