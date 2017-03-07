@@ -12,6 +12,10 @@ export class EventListComponent implements OnInit {
   ngOnInit() {
   }
   pageTitle:string = 'Event List';
+  imageWidth:number =50;
+  imageMargin:number =2;
+  image:number =50;
+
   events: any[] = [  {
     "name": "Event 1",
     "code": "Evt100",
