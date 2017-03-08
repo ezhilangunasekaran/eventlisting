@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IEvents } from '../../events/events';
 
 @Component({
   selector: 'event-list',
@@ -17,7 +18,7 @@ export class EventListComponent implements OnInit {
   showImage:boolean =false;
   searchCriteria:string = 'sand';
 
-  events: any[] = [  {
+  events: IEvents[] = [  {
     "name": "Event 1",
     "code": "Evt100",
     "description": "The first event",
