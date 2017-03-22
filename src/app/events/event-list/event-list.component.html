@@ -32,7 +32,7 @@
 
       </thead>
       <tbody>
-      <tr *ngFor='let event of events'>
+      <tr *ngFor='let event of events | eventFilter:searchCriteria'>
         <td><img *ngIf="showImage" [src]='event.imageUrl' [title]='event.eventName | lowercase' [style.margin.px] ='imageMargin' [style.width.px]='imageWidth'></td>
         <td>{{event.name}}</td>
         <td>{{event.code | lowercase }}</td>

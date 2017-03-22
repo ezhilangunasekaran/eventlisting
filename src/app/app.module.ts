@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { EventListComponent } from './events/event-list/event-list.component';
+import { EventFilterPipe } from './events/event-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventListComponent
+    EventListComponent,
+    EventFilterPipe
   ],
   imports: [
     BrowserModule,

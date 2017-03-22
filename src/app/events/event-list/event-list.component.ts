@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IEvents } from '../../events/events';
+import { IEvents } from '../events';
 
 @Component({
   selector: 'event-list',
@@ -10,9 +10,8 @@ export class EventListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-  pageTitle:string = 'Event List';
+
+  // pageTitle:string = 'Event List';
   imageWidth:number =50;
   imageMargin:number =2;
   showImage:boolean =false;
@@ -101,5 +100,8 @@ export class EventListComponent implements OnInit {
   ];
   toggleImage(): void{
     this.showImage = !this.showImage;
+  }
+  ngOnInit() {
+    console.log("On Init!");
   }
 }
