@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { EventListComponent } from './events/event-list/event-list.component';
 import { EventFilterPipe } from './events/event-filter.pipe';
 
+//services
+import { EventService } from './events/event.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,7 @@ import { EventFilterPipe } from './events/event-filter.pipe';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
